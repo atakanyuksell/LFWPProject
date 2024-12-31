@@ -3,3 +3,6 @@ This is a real project I developed for a law firm. This project, developed with 
 Additionally, I am sharing the admin username and password below so that everyone who views this repository can check the live version of the site.
 
 You can [click](https://www.abdulhakimogullari.com) to access the webpage. 
+
+admin user-name => abdhanabd
+admin password => 081123
