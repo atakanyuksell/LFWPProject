@@ -1,234 +1,98 @@
-﻿/* Genel Ayarlar */
+﻿html, body {
+    /* width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Libre Caslon Display', serif; */
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: 'Libre Caslon Display', serif;
+}
+
+    body > main {
+        flex: 1;
+    }
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth; /* Yumuşak kaydırma */
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-    font-family: "Libre Caslon Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    background: none; /* Varsayılan arka plan rengini kaldırır */
-    background-color: white;
-    /* background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; 
-  line-height: 1.6;*/
-}
-
-/* Navbar */
-.navbar-section {
-    background-color: transparent; /* Gri arka planı kaldırır */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 20px;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border: #555;
-    border-radius: 100%;
-}
-
-.content-hp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+.hero-h {
+    position: relative;
     height: 100vh;
-    padding: 50px;
-    margin: 100px;
-    color: white;
-}
-
-    .content-hp h1 {
-        font-size: 36px;
-        text-align: center;
-        margin: 100px 0 10px;
-        opacity: 0; /* Başlangıçta görünmez */
-        animation: fadeIn 2s ease-in-out forwards; /* Yavaşça görünür */
-    }
-
-
-    /* Çizgi (Divider) Animasyonu */
-    .content-hp hr {
-        width: 0; /* Başlangıçta görünmez */
-        height: 3px;
-        background-color: white;
-        margin: 0 auto;
-        border: none;
-        animation: expandLine 1.5s ease-out forwards; /* Soldan sağa genişler */
-        animation-delay: 1s; /* Başlık animasyonundan sonra başlar */
-    }
-
-.title {
-    color: white;
-    margin: 0;
-    flex-grow: 1;
-}
-
-.navbar {
-    /* display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  list-style: none;
-  justify-content: center;
-  width: 100%; */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    position: fixed;
-    top: -100px; /* Başlangıçta yukarıda gizli */
-    width: 100%;
-    color: white;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    animation: slideDown 1s ease-out forwards; /* Animasyon ekledik */
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item {
-    margin-top: 20px;
-    margin-right: 100px;
-}
-
-    .nav-item a {
-        /* color: white;
-  text-decoration: none;
-  font-weight: bold; */
-
-        color: white;
-        text-decoration: none;
-        padding: 8px 15px;
-        transition: background 0.3s; /* Hover efekti için geçiş */
-    }
-
-/* Boş placeholder: Sabit navbar yüksekliği kadar boşluk bırakıyoruz */
-.header-placeholder {
-    height: 70px; /* Navbar yüksekliğine göre ayarlanmalı */
-}
-
-/* Bölümler */
-.section {
-    /*height: 100vh;  /* Her bölüm tam ekran yüksekliğinde */
-    /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center; */
-    /*background-color: rgba(255, 255, 255, 0.7); /* Yarı saydam beyaz katman */
-    /*backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
-
-    padding: 50px;
-    text-align: center;
-    min-height: 100vh;
-    opacity: 0;
-    animation: fadeSection 1s ease-in-out forwards;
-    animation-delay: 0.01s; /* Navbar ve başlık sonrası görünür */
-    box-shadow: 0 50px 15px rgba(0, 0, 0, 0.2), 0 -50px 15px rgba(0, 0, 0, 0.2); /* Üst ve alt gölgelendirme */
-    transition: all 1s ease;
-}
-
-    .section h1 {
-        font-size: 3rem;
-        color: white;
-        margin-bottom: 20px;
-    }
-
-    .section p {
-        font-size: 1.2rem;
-        color: white;
-        max-width: 800px;
-    }
-
-/* Anasayfa Bölümü */
-#anasayfa {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-image: url('background-homepage.png'); /* Tek arka plan */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-homepage.png');
+    background-image: url("img/background-homepage.png");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    background-attachment: local;
-    height: 100vh; /* Tam ekran kaplar */
-}
-
-/* Hakkımda Bölümü */
-#ozgecmis {
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: row;
+    align-items: flex-end;
     justify-content: center;
-    background-color: rgba(0, 0, 0); /* Yarı saydam beyaz katman */
-    height: 100vh; /* Tam ekran kaplar */
-    /*backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    text-align: center;
+    color: white;
+    padding-top: 10vh;
 }
 
-    #ozgecmis h1 {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
+    .hero-h::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
     }
 
-    #ozgecmis p {
-        max-width: 800px;
+.hero-text {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10vh !important;
+}
+
+.hero-title {
+    display: inline-block;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out forwards; /* Yavaşça görünür */
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
     }
-/* Tecrübe Bölümü */
-#tecrube {
-    /*background-color: rgba(255, 255, 255, 0.7); /* Yarı saydam beyaz katman */
-    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
 }
 
-/* Misyon-Vizyon Bölümü */
-#misyon-vizyon {
-    /*background-color: rgba(255, 255, 255, 0.7); /* Yarı saydam beyaz katman */
-    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
-}
-
-/* İletişim Bölümü */
-#iletisim {
-    background-color: rgba(0, 0, 0); /* Yarı saydam beyaz katman */
-    background-image: none;
-    /*backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
 }
 
 
+hr {
+    height: 2px;
+    opacity: 1;
+    background-color: rgb(236, 236, 236);
+    display: inline-block;
+    animation: expandLine 1.5s ease-out forwards; /* Soldan sağa genişler */
+    animation-delay: 0.5s; /* Başlık animasyonundan sonra başlar */
+    width: 70% !important;
+}
 
-@keyframes slideDown {
+@keyframes expandLine {
     from {
-        top: -100px; /* Yukarıdan başlar */
+        width: 0; /* Başlangıçta görünmez */
     }
 
     to {
-        top: 0; /* Yerine oturur */
+        width: 70%; /* Genişlik final durumu */
     }
-}
-
-.navbar a:hover {
-    background: #555;
-    border-radius: 5px;
 }
 
 @keyframes fadeIn {
@@ -240,28 +104,5 @@ body {
     to {
         opacity: 1;
         transform: translateY(0); /* Yerine oturur */
-    }
-}
-
-@keyframes expandLine {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 50%; /* Çizgi genişliği */
-    }
-}
-
-
-@keyframes fadeSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }

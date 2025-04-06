@@ -1,0 +1,124 @@
+﻿@* 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3 py-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand me-1" href="/">
+        <img src="stylsheets/img/logo.png" alt="Logo" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav gap-5 fs-4">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutus.html">Hakkımızda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team.html">Ekibimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ourservice.html">Hizmetlerimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/contact.html">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ *@
+  <!-- HERO -->
+  <section class="hero position-relative">
+    <div class="container-fluid px-0">
+      <img src="~/img/background-homepage.png" class="img-fluid w-100" alt="Banner"
+        style="height: 50vh; object-fit: cover;">
+      <!-- Overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+
+    <!-- Sol alt köşedeki yazı ve çizgi -->
+    <div class="position-absolute bottom-0 start-0 text-white p-4 bg-dark bg-opacity-75 rounded-top-end">
+      <h1 class="display-4 fw-bolder mb-2">İletişim</h1>
+      <div class="border-top border-light" style="width: 100%; height: 2px;"></div>
+    </div>
+  </section>
+  <!-- <section class="">
+    <div class="container-fluid px-0">
+      <img src="stylsheets/img/background-homepage.png" class="img-fluid w-100" alt="Banner" style="height: 50vh; object-fit: cover; ">
+    </div>
+  </section> -->
+<main>
+  <!-- Content -->
+  <section class="container my-5">
+    <div class="row g-4">
+
+      <!-- Adres -->
+      <div class="col-12 col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Adresimiz ve Çalışma Saatlerimiz</h5>
+            <p><strong>Adres:</strong> Örnek Mah. Örnek Cad. No:123 İstanbul, Türkiye</p>
+            <p><strong>Telefon:</strong> +90 555 123 45 67</p>
+            <p><strong>E-Posta:</strong> info@ornekfirma.com</p>
+            <h6 class="text-muted">Çalışma Saatleri</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Pzt - Cuma: 09:00 - 18:00</li>
+              <li class="list-group-item">Cumartesi: 10:00 - 14:00</li>
+              <li class="list-group-item">Pazar: Kapalı</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Harita -->
+      <div class="col-12 col-lg-6">
+        <div class="card h-100">
+          <div class="ratio ratio-4x3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.189951661704!2d29.1779803!3d40.911580799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac584a2399951%3A0xd76343c3b32fbae2!2sABDULHAK%C4%B0MO%C4%9EULLARI%20HUKUK!5e0!3m2!1str!2str!4v1739725340341!5m2!1str!2str"
+              allowfullscreen="" loading="lazy" class="border-0 rounded-bottom"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- İletişim Formu -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bize Ulaşın</h5>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Adınız" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Soyadınız" required>
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control" placeholder="E-posta" required>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                </div>
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-primary">Gönder</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container mb-5">
+      <p class="mb-0">&copy; 2025 Tüm Hakları Saklıdır.</p>
+      <small>(Kahve molasına çıkan ekip üyeleri, birazdan geri gelecek!)</small>
+    </div>
+  </footer>
