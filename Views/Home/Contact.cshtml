@@ -1,36 +1,9 @@
-﻿@* 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3 py-3 shadow-sm">
-    <div class="container">
-      <a class="navbar-brand me-1" href="/">
-        <img src="stylsheets/img/logo.png" alt="Logo" height="60">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-        <ul class="navbar-nav gap-5 fs-4">
-          <li class="nav-item">
-            <a class="nav-link" href="/index.html">Anasayfa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/aboutus.html">Hakkımızda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/team.html">Ekibimiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/ourservice.html">Hizmetlerimiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/contact.html">İletişim</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
- *@
+﻿@model LawFirmWebPage.Models.ContactFormModel
+
+@{
+	ViewData["Title"] = "İletişim";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
   <!-- HERO -->
   <section class="hero position-relative">
     <div class="container-fluid px-0">
@@ -85,27 +58,30 @@
       </div>
 
       <!-- İletişim Formu -->
+
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+                        
             <h5 class="card-title">Bize Ulaşın</h5>
-            <form>
+            <form method="post">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Adınız" required>
+                  <input name="Name" type="text" class="form-control" placeholder="Adınız" value="@Model.Name" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Soyadınız" required>
+                  <input  name="Surname" type="text" class="form-control" placeholder="Soyadınız" value="@Model.Surname" required>
                 </div>
                 <div class="col-12">
-                  <input type="email" class="form-control" placeholder="E-posta" required>
+                  <input name="Email" type="email" class="form-control" placeholder="E-posta" value="@Model.Email" required>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                  <textarea name="Message" class="form-control" rows="5" placeholder="Mesajınız" value="@Model.Message" required></textarea>
                 </div>
                 <div class="col-12 text-end">
-                  <button type="submit" class="btn btn-primary">Gönder</button>
+                <button type="submit" formaction="~/Contact" class="btn btn-primary">Gönder</button>
                 </div>
+                           
               </div>
             </form>
           </div>

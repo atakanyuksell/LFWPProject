@@ -1,0 +1,28 @@
+﻿@model List<LawFirmWebPage.Entities.ContactMessage>
+
+<div class="container mt-5">
+    <h2 class="text-center">Gelen Mesajlar</h2>
+    <table class="table table-striped table-bordered mx-auto">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Email</th>
+                <th>Mesaj</th>
+                <th>Tarih</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var msg in Model)
+            {
+                <tr>
+                    <td>@msg.Name</td>
+                    <td>@msg.Surname</td>
+                    <td>@msg.Email</td>
+                    <td>@msg.Message</td>
+                    <td>@msg.SentDate.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
