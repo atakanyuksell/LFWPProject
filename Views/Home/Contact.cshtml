@@ -1,36 +1,9 @@
-﻿@* 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3 py-3 shadow-sm">
-    <div class="container">
-      <a class="navbar-brand me-1" href="/">
-        <img src="stylsheets/img/logo.png" alt="Logo" height="60">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-        <ul class="navbar-nav gap-5 fs-4">
-          <li class="nav-item">
-            <a class="nav-link" href="/index.html">Anasayfa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/aboutus.html">Hakkımızda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/team.html">Ekibimiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/ourservice.html">Hizmetlerimiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/contact.html">İletişim</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
- *@
+﻿@model LawFirmWebPage.Models.ContactFormModel
+
+@{
+	ViewData["Title"] = "İletişim";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
   <!-- HERO -->
   <section class="hero position-relative">
     <div class="container-fluid px-0">
@@ -60,14 +33,13 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Adresimiz ve Çalışma Saatlerimiz</h5>
-            <p><strong>Adres:</strong> Örnek Mah. Örnek Cad. No:123 İstanbul, Türkiye</p>
-            <p><strong>Telefon:</strong> +90 555 123 45 67</p>
-            <p><strong>E-Posta:</strong> info@ornekfirma.com</p>
+            <p><strong>Adres:</strong> Cevizli mah. Kastamonu sok. No:23 Adalet İş Merkezi Kat:11 D:45 Kartal/ İSTANBUL</p>
+            <p><strong>Telefon:</strong> +90 542 459 77 43</p>
+            <p><strong>E-Posta:</strong> abdulhakimogullarihukuk@gmail.com</p>
             <h6 class="text-muted">Çalışma Saatleri</h6>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Pzt - Cuma: 09:00 - 18:00</li>
-              <li class="list-group-item">Cumartesi: 10:00 - 14:00</li>
-              <li class="list-group-item">Pazar: Kapalı</li>
+              <li class="list-group-item"> Pzt - Cuma: 09:00 - 18:00</li>
+              <li class="list-group-item"> Cumartesi: 10:00 - 14:00</li>
             </ul>
           </div>
         </div>
@@ -85,27 +57,30 @@
       </div>
 
       <!-- İletişim Formu -->
+
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+                        
             <h5 class="card-title">Bize Ulaşın</h5>
-            <form>
+            <form method="post">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Adınız" required>
+                  <input name="Name" type="text" class="form-control" placeholder="Adınız" value="@Model.Name" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Soyadınız" required>
+                  <input  name="Surname" type="text" class="form-control" placeholder="Soyadınız" value="@Model.Surname" required>
                 </div>
                 <div class="col-12">
-                  <input type="email" class="form-control" placeholder="E-posta" required>
+                  <input name="Email" type="email" class="form-control" placeholder="E-posta" value="@Model.Email" required>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                  <textarea name="Message" class="form-control" rows="5" placeholder="Mesajınız" value="@Model.Message" required></textarea>
                 </div>
                 <div class="col-12 text-end">
-                  <button type="submit" class="btn btn-primary">Gönder</button>
+                <button type="submit" formaction="~/Contact" class="btn btn-primary">Gönder</button>
                 </div>
+                           
               </div>
             </form>
           </div>
@@ -115,10 +90,4 @@
     </div>
   </section>
 </main>
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <div class="container mb-5">
-      <p class="mb-0">&copy; 2025 Tüm Hakları Saklıdır.</p>
-      <small>(Kahve molasına çıkan ekip üyeleri, birazdan geri gelecek!)</small>
-    </div>
-  </footer>
+
