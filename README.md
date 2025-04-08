@@ -4,6 +4,4 @@ Additionally, I am sharing the admin username and password below so that everyon
 
 You can [click](https://www.abdulhakimogullari.com) to access the webpage. 
 
-admin user-name => abdhanabd
 
-admin password => 081123
