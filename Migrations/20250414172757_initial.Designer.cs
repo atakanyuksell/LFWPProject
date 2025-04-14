@@ -3,7 +3,6 @@ using System;
 using LawFirmWebPage.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -12,44 +11,38 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LawFirmWebPage.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250408172610_AddContactMessageTable")]
-    partial class AddContactMessageTable
+    [Migration("20250414172757_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.36")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.36");
 
             modelBuilder.Entity("LawFirmWebPage.Entities.ContactMessage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Message")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("SentDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Surname")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -59,11 +52,11 @@ namespace LawFirmWebPage.Migrations
                         new
                         {
                             Id = 1,
-                            Email = "ahmet.yilmaz@example.com",
-                            Message = "Merhaba, size nasıl yardımcı olabilirim?",
-                            Name = "Ahmet",
+                            Email = "deneme.yilmaz@example.com",
+                            Message = "deneme",
+                            Name = "Atakan",
                             SentDate = new DateTime(2025, 4, 8, 10, 0, 0, 0, DateTimeKind.Unspecified),
-                            Surname = "Yılmaz"
+                            Surname = "Yüksel"
                         },
                         new
                         {
