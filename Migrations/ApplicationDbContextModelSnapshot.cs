@@ -64,33 +64,6 @@ namespace LawFirmWebPage.Migrations
                             Name = "Mehmet",
                             SentDate = new DateTime(2025, 4, 8, 10, 15, 0, 0, DateTimeKind.Unspecified),
                             Surname = "Kaya"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Email = "ayse.demir@example.com",
-                            Message = "Hizmetleriniz hakkında daha fazla bilgi almak istiyorum.",
-                            Name = "Ayşe",
-                            SentDate = new DateTime(2025, 4, 8, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            Surname = "Demir"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Email = "fatma.ozdemir@example.com",
-                            Message = "İş birliği yapmak istiyoruz.",
-                            Name = "Fatma",
-                            SentDate = new DateTime(2025, 4, 8, 10, 45, 0, 0, DateTimeKind.Unspecified),
-                            Surname = "Özdemir"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Email = "ali.celik@example.com",
-                            Message = "Projelerinizle ilgili detayları öğrenmek istiyorum.",
-                            Name = "Ali",
-                            SentDate = new DateTime(2025, 4, 8, 11, 0, 0, 0, DateTimeKind.Unspecified),
-                            Surname = "Çelik"
                         });
                 });
 #pragma warning restore 612, 618

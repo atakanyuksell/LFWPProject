@@ -14,30 +14,7 @@
     "Email": "mehmet.kaya@example.com",
     "Message": "Web sitenizle ilgili birkaç sorum var.",
     "SentDate": "2025-04-08T10:15:00"
-  },
-  {
-    "Id": 3,
-    "Name": "Ayşe",
-    "Surname": "Demir",
-    "Email": "ayse.demir@example.com",
-    "Message": "Hizmetleriniz hakkında daha fazla bilgi almak istiyorum.",
-    "SentDate": "2025-04-08T10:30:00"
-  },
-  {
-    "Id": 4,
-    "Name": "Fatma",
-    "Surname": "Özdemir",
-    "Email": "fatma.ozdemir@example.com",
-    "Message": "İş birliği yapmak istiyoruz.",
-    "SentDate": "2025-04-08T10:45:00"
-  },
-  {
-    "Id": 5,
-    "Name": "Ali",
-    "Surname": "Çelik",
-    "Email": "ali.celik@example.com",
-    "Message": "Projelerinizle ilgili detayları öğrenmek istiyorum.",
-    "SentDate": "2025-04-08T11:00:00"
   }
+
 
 ]
