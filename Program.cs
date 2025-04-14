@@ -23,13 +23,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 
 var app = builder.Build();
 
+app.Urls.Add("http://0.0.0.0:5003");
+
 app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 app.MapControllers();
-
-
-
-
 
 app.Run();

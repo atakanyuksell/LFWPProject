@@ -7,6 +7,7 @@
         public string Surname { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
-        public DateTime SentDate { get; set; } = DateTime.Now; // Mesaj gönderildiği zaman
+        public DateTime SentDate { get; set; } = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
+    TimeZoneInfo.FindSystemTimeZoneById("Turkey Standard Time")); // Mesaj gönderildiği zaman
     }
 }
